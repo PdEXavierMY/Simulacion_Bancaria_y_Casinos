@@ -39,3 +39,25 @@ class JugadorNumero(Jugador):
             self.decrementar_saldo(10)
             print(self.nombre + " ha perdido 10€")
 
+class JugadorParImpar(Jugador):
+    def __init__(self, ruleta, nombre, saldo):
+        Jugador.__init__(self, ruleta, nombre, saldo)
+        self.par = random.choice([True, False])
+    def jugar(self):
+        if self.ruleta.get_numero() == 0:
+            self.ruleta.decrementar_banca(self.get_saldo())
+            self.set_saldo(0)
+            print(self.nombre + " ha perdido todo su dinero")
+        elif self.par and self.ruleta.get_numero() % 2 == 0:
+            self.ruleta.incrementar_banca(20)
+            self.incrementar_saldo(20)
+            print(self.nombre + " ha ganado 20€")
+        elif not self.par and self.ruleta.get_numero() % 2 != 0:
+            self.ruleta.incrementar_banca(20)
+            self.incrementar_saldo(20)
+            print(self.nombre + " ha ganado 20€")
+        else:
+            self.ruleta.decrementar_banca(10)
+            self.decrementar_saldo(10)
+            print(self.nombre + " ha perdido 10€")
+
