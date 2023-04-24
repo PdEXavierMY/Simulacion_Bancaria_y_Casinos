@@ -25,3 +25,17 @@ class Jugador(threading.Thread):
     def decrementar_saldo(self, cantidad):
         self.saldo -= cantidad
 
+class JugadorNumero(Jugador):
+    def __init__(self, ruleta, nombre, saldo):
+        Jugador.__init__(self, ruleta, nombre, saldo)
+        self.numero = random.randint(1, 36)
+    def jugar(self):
+        if self.ruleta.get_numero() == self.numero:
+            self.ruleta.incrementar_banca(360)
+            self.incrementar_saldo(360)
+            print(self.nombre + " ha ganado 360€")
+        else:
+            self.ruleta.decrementar_banca(10)
+            self.decrementar_saldo(10)
+            print(self.nombre + " ha perdido 10€")
+
