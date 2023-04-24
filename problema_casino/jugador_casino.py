@@ -61,3 +61,19 @@ class JugadorParImpar(Jugador):
             self.decrementar_saldo(10)
             print(self.nombre + " ha perdido 10€")
 
+class JugadorMartingala(Jugador):
+    def __init__(self, ruleta, nombre, saldo):
+        Jugador.__init__(self, ruleta, nombre, saldo)
+        self.numero = random.randint(1, 36)
+        self.apuesta = 10
+    def jugar(self):
+        if self.ruleta.get_numero() == self.numero:
+            self.ruleta.incrementar_banca(self.apuesta * 36)
+            self.incrementar_saldo(self.apuesta * 36)
+            print(self.nombre + " ha ganado " + str(self.apuesta * 36) + "€")
+            self.apuesta = 10
+        else:
+            self.ruleta.decrementar_banca(self.apuesta)
+            self.decrementar_saldo(self.apuesta)
+            print(self.nombre + " ha perdido " + str(self.apuesta) + "€")
+            self.apuesta *= 2
