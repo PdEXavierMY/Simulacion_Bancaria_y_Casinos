@@ -168,6 +168,7 @@ class Jugador(threading.Thread):
             self.ruleta.tirar()
             print(self.nombre + " ha seleccionado el " + str(self.ruleta.get_numero()))
             self.jugar()
+        print(self.nombre + " ha perdido todo su dinero, por lo que se retira del casino")
     def jugar(self):
         pass
     def get_saldo(self):
