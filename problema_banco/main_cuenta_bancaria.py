@@ -3,21 +3,21 @@ from problema_banco.cuenta_bancaria import CuentaBancaria, Ingresar, Retirar
 
 def main():
     cuenta = CuentaBancaria(100)
-    hilos = []
+    procesos = []
     for i in range(40):
-        hilos.append(Ingresar(cuenta, 100))
+        procesos.append(Ingresar(cuenta, 100))
     for i in range(20):
-        hilos.append(Ingresar(cuenta, 50))
+        procesos.append(Ingresar(cuenta, 50))
     for i in range(60):
-        hilos.append(Ingresar(cuenta, 20))
+        procesos.append(Ingresar(cuenta, 20))
     for i in range(40):
-        hilos.append(Retirar(cuenta, 100))
+        procesos.append(Retirar(cuenta, 100))
     for i in range(20):
-        hilos.append(Retirar(cuenta, 50))
+        procesos.append(Retirar(cuenta, 50))
     for i in range(60):
-        hilos.append(Retirar(cuenta, 20))
-    for hilo in hilos:
+        procesos.append(Retirar(cuenta, 20))
+    for hilo in procesos:
         hilo.start()
-    for hilo in hilos:
+    for hilo in procesos:
         hilo.join()
     print("Balance final de cuenta = "+str(cuenta.get_cantidad())+"€")
