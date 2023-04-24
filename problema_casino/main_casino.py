@@ -1,5 +1,5 @@
-from problema_casino.jugador_casino import JugadorNumero, JugadorParImpar, JugadorMartingala
-from problema_casino.banca import Ruleta
+from jugador_casino import JugadorNumero, JugadorParImpar, JugadorMartingala
+from banca import Ruleta
 
 
 def main():
