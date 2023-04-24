@@ -12,7 +12,7 @@ class Jugador(threading.Thread):
         while self.saldo > 0:
             time.sleep(3)
             self.ruleta.tirar()
-            print(self.nombre + " ha sacado el " + str(self.ruleta.get_numero()))
+            print(self.nombre + " ha seleccionado el " + str(self.ruleta.get_numero()))
             self.jugar()
     def jugar(self):
         pass
