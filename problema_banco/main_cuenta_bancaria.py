@@ -21,6 +21,3 @@ def main():
     for hilo in hilos:
         hilo.join()
     print("Balance final de cuenta = "+str(cuenta.get_cantidad())+"€")
-
-if __name__ == '__main__':
-    main()

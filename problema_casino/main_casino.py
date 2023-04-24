@@ -14,6 +14,3 @@ def main():
     for jugador in jugadores:
         jugador.join()
     print("La banca tiene " + str(ruleta.get_banca()) + "€")
-
-if __name__ == '__main__':
-    main()
