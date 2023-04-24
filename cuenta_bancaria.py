@@ -6,8 +6,10 @@ class CuentaBancaria:
         self.lock = threading.Lock()
     def ingresar(self, cantidad):
         self.cantidad += cantidad
+        print("Ingresando " + str(cantidad) + "€")
     def retirar(self, cantidad):
         self.cantidad -= cantidad
+        print("Retirando " + str(cantidad) + "€")
     def get_cantidad(self):
         return self.cantidad
     
