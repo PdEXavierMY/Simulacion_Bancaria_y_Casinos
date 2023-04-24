@@ -3,7 +3,7 @@
 
 [Este](https://github.com/Xavitheforce/Simulacion_Bancaria_y_Casinos) es el enlace a mi repositorio.
 
-<h6>El ejercicio requerido 1 es el siguiente:</h6>
+<h6>El ejercicio 1 es el siguiente:</h6>
 
 """ Un banco necesita controlar el acceso a cuentas bancarias y para ello desea hacer un programa de prueba en python(unitt test, dock test o mock test) que permita lanzar procesos que ingresen y retiren dinero a la vez y comprobar así si el resultado final es el esperado.
 
@@ -98,7 +98,7 @@ def main():
 ```
 
 
-<h6>El ejercicio requerido 2 es el siguiente:</h6>
+<h6>El ejercicio 2 es el siguiente:</h6>
 
 """ Se desea simular los posibles beneficios de diversas estrategias de juego en un casino. La ruleta francesa es un juego en el que hay una ruleta con 37 números (del 0 al 36). Cada 3000 milisegundos el croupier saca un número al azar y los diversos hilos apuestan para ver si ganan. Todos los hilos empiezan con 1.000 euros y la banca (que controla la ruleta) con 50.000. Cuando los jugadores pierden dinero, la banca incrementa su saldo.
 
