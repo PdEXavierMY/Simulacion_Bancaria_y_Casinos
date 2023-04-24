@@ -1,4 +1,4 @@
-from cuenta_bancaria import CuentaBancaria, Ingresar, Retirar
+from problema_banco.cuenta_bancaria import CuentaBancaria, Ingresar, Retirar
     
 
 def main():
